@@ -1,0 +1,16 @@
+{% extends 'send_email_app/base.html' %}
+
+{% block content %}
+<h1>Post Detail</h1>
+<h1>{{ post.title }}</h1>
+<p>{{ post.content }}</p>
+<p>Published by {{ post.author.full_name }} on {{ post.created }}</p>
+<p>Viewed {{ post.view_count }} times</p>
+<br>
+<a class="btn btn-primary" id="btnSendEmail" onclick="SendEmail(event)" role="button">Test button</a>
+
+{% endblock content %}
+
+{% block javascript %}
+
+{% endblock javascript %}
